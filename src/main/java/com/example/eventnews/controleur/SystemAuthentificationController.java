@@ -14,7 +14,10 @@ import java.util.List;
 public class SystemAuthentificationController {
 
     private final SystemAuthentificationService systemAuthentificationService;
-
+    /**
+     * Il faudra injecter un lien vers la classe Service ainsi.
+     * En utilisant le tag @Autowired. On n’a pas besoin d’instancier l’objet via le constructeur.
+     * */
     @Autowired
     public SystemAuthentificationController(SystemAuthentificationService systemAuthentificationService) {
         this.systemAuthentificationService = systemAuthentificationService;
@@ -26,7 +29,7 @@ public class SystemAuthentificationController {
     }
 
     @PostMapping
-    public void registrerNewSystemAuthentification(@RequestBody SystemAuthentification systemAuthentification){
+    public void EnregistrerNewSystemAuthentification(@RequestBody SystemAuthentification systemAuthentification){
         systemAuthentificationService.addNewSystemAuthentification(systemAuthentification);
     }
 }

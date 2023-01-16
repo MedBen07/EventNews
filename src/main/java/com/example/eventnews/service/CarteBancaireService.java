@@ -1,8 +1,6 @@
 package com.example.eventnews.service;
 
-import com.example.eventnews.model.Billet;
 import com.example.eventnews.model.CarteBancaire;
-import com.example.eventnews.repository.BilletRepository;
 import com.example.eventnews.repository.CarteBancaireRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +8,10 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
-
+/**
+ * Agit comme une couche intermédiaire entre la couche
+ * de persistance (repository) et la couche de contrôleur
+ */
 @Service
 @Transactional
 public class CarteBancaireService {

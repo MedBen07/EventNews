@@ -7,11 +7,13 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-@Repository
+/**
+ * Cette interface est responsable d’accéder à la bd
+ *
+ */
+@Repository //Pour indiquer que c’est la couche qui a accès a la bd
 public interface AbonneRepository extends JpaRepository<Abonne, Long> {
 
-    //LA PRESENTE INTERFACE NOUS PERMET DE DISPOSER DE TOUTES LES OPERATIONS DE BASE SUR LES DONNÉES DE L'ABONNÉ
-    // AUTOMATIQUEMENT EN TOUT CE QUI CONCERNE : SAVE, MODIFICATION, RECHERCHE ET SUPPRESSION
     @Query("SELECT s FROM Abonne s WHERE s.courriel = ?1")
     Optional<Abonne> findAbonneByEmail(String email);
 

@@ -10,7 +10,10 @@ import java.util.List;
 @RequestMapping(path="/carte")
 public class CarteBancaireController {
     private final CarteBancaireService carteBancaireService;
-
+    /**
+     * Il faudra injecter un lien vers la classe Service ainsi.
+     * En utilisant le tag @Autowired. On n’a pas besoin d’instancier l’objet via le constructeur.
+     * */
     @Autowired
     public CarteBancaireController(CarteBancaireService carteBancaireService) {
         this.carteBancaireService = carteBancaireService;
@@ -22,7 +25,7 @@ public class CarteBancaireController {
     }
 
     @PostMapping
-    public void registrerNewAdresse(@RequestBody CarteBancaire carteBancaire){
+    public void EnregistrerNewAdresse(@RequestBody CarteBancaire carteBancaire){
         carteBancaireService.addNewCarteBancaire(carteBancaire);
     }
 }

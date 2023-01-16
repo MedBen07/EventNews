@@ -14,7 +14,10 @@ import java.util.List;
 public class EvenementController {
 
     private final EvenementService evenementService;
-
+    /**
+     * Il faudra injecter un lien vers la classe Service ainsi.
+     * En utilisant le tag @Autowired. On n’a pas besoin d’instancier l’objet via le constructeur.
+     * */
     @Autowired
     public EvenementController(EvenementService evenementService) {
         this.evenementService = evenementService;
@@ -26,7 +29,7 @@ public class EvenementController {
     }
 
     @PostMapping
-    public void registrerNewEvenement(@RequestBody Evenement evenement){
+    public void EnregistrerNewEvenement(@RequestBody Evenement evenement){
         evenementService.addNewEvenement(evenement);
     }
 }

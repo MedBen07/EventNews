@@ -9,6 +9,10 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Agit comme une couche intermédiaire entre la couche
+ * de persistance (repository) et la couche de contrôleur
+ */
 
 @Service
 @Transactional

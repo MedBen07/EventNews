@@ -14,7 +14,10 @@ import java.util.List;
 public class VisiteurController {
 
     private final VisiteurService visiteurService;
-
+    /**
+     * Il faudra injecter un lien vers la classe Service ainsi.
+     * En utilisant le tag @Autowired. On n’a pas besoin d’instancier l’objet via le constructeur.
+     * */
     @Autowired
     public VisiteurController(VisiteurService visiteurService) {
         this.visiteurService = visiteurService;
@@ -26,7 +29,7 @@ public class VisiteurController {
     }
 
     @PostMapping
-    public void registrerNewPanier(@RequestBody Visiteur visiteur){
+    public void EnregistrerNewPanier(@RequestBody Visiteur visiteur){
         visiteurService.addNewVisiteur(visiteur);
     }
 }

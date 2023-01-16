@@ -3,7 +3,6 @@ package com.example.eventnews.model;
 import lombok.*;
 
 import javax.persistence.*;
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter

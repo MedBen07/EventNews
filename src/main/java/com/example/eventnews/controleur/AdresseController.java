@@ -11,7 +11,10 @@ import java.util.List;
 @RequestMapping(path="/adresse")
 public class AdresseController {
     private final AdresseService adresseService;
-
+    /**
+     * Il faudra injecter un lien vers la classe Service ainsi.
+     * En utilisant le tag @Autowired. On n’a pas besoin d’instancier l’objet via le constructeur.
+     * */
     @Autowired
     public AdresseController(AdresseService adresseService) {
         this.adresseService = adresseService;
@@ -23,7 +26,7 @@ public class AdresseController {
     }
 
     @PostMapping
-    public void registrerNewAdresse(@RequestBody Adresse adresse){
+    public void EnregistrerNewAdresse(@RequestBody Adresse adresse){
         adresseService.addNewAdresse(adresse);
     }
 }

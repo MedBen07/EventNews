@@ -11,7 +11,10 @@ import java.util.List;
 @RequestMapping(path="/abonne")
 public class AbonneController {
     private final AbonneService abonneService;
-
+/**
+ * Il faudra injecter un lien vers la classe Service ainsi.
+ * En utilisant le tag @Autowired. On n’a pas besoin d’instancier l’objet via le constructeur.
+ * */
     @Autowired
     public AbonneController(AbonneService abonneService) {
         this.abonneService = abonneService;
@@ -23,7 +26,7 @@ public class AbonneController {
     }
 
     @PostMapping
-    public void registrerNewAbonne(@RequestBody Abonne abonne){
+    public void EnregistrerNewAbonne(@RequestBody Abonne abonne){
         abonneService.addNewAbonne(abonne);
     }
 

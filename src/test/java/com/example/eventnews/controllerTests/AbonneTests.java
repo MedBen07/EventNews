@@ -19,10 +19,16 @@ public class AbonneTests {
 
     @Test
     public void testCreateAbonne(){
-        Abonne abonne1 = new Abonne("sarri", "ahmed", "sarri@gmail.com", "455-555-8888");
+        Abonne abonne1 = new Abonne("Jean", "Paul", "jean@gmail.com", "455-555-8888");
         abonneRepository.save(abonne1);
-        Abonne abonne2 = new Abonne("benali", "mohamed", "benali@gmail.com", "455-444-9999");
+        Abonne abonne2 = new Abonne("Alex", "Dupon", "alex@gmail.com", "455-444-9999");
         abonneRepository.save(abonne2);
+        Abonne abonne3 = new Abonne("Abdel", "Ali", "abdel@gmail.com", "455-444-9999");
+        abonneRepository.save(abonne3);
+        Abonne abonne4 = new Abonne("Julie", "Sarra", "julie@gmail.com", "455-444-9999");
+        abonneRepository.save(abonne4);
+        Abonne abonne5 = new Abonne("Nicole", "Gamache", "nicole@gmail.com", "455-444-9999");
+        abonneRepository.save(abonne5);
     }
 
     @Test

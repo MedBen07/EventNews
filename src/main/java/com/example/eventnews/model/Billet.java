@@ -1,13 +1,10 @@
 package com.example.eventnews.model;
 
 import lombok.*;
-
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter

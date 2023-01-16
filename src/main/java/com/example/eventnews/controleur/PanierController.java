@@ -12,7 +12,10 @@ import java.util.List;
 public class PanierController {
 
     private final PanierService panierService;
-
+    /**
+     * Il faudra injecter un lien vers la classe Service ainsi.
+     * En utilisant le tag @Autowired. On n’a pas besoin d’instancier l’objet via le constructeur.
+     * */
     @Autowired
     public PanierController(PanierService panierService) {
         this.panierService = panierService;
@@ -24,7 +27,7 @@ public class PanierController {
     }
 
     @PostMapping
-    public void registrerNewPanier(@RequestBody Panier panier){
+    public void EnregistrerNewPanier(@RequestBody Panier panier){
         panierService.addNewPanier(panier);
     }
 

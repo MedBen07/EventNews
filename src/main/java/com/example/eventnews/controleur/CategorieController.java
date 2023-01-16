@@ -14,7 +14,10 @@ import java.util.List;
 public class CategorieController {
 
     private final CategorieService categorieService;
-
+    /**
+     * Il faudra injecter un lien vers la classe Service ainsi.
+     * En utilisant le tag @Autowired. On n’a pas besoin d’instancier l’objet via le constructeur.
+     * */
     @Autowired
     public CategorieController(CategorieService categorieService) {
         this.categorieService = categorieService;
@@ -26,7 +29,7 @@ public class CategorieController {
     }
 
     @PostMapping
-    public void registrerNewCategorie(@RequestBody Categorie abonne){
+    public void EnregistrerNewCategorie(@RequestBody Categorie abonne){
         categorieService.addNewCategorie(abonne);
     }
 }
